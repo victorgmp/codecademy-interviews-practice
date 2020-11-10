@@ -6,7 +6,11 @@ seasons.addToHead('spring');
 
 seasons.addToTail('fall');
 seasons.addToTail('winter');
+seasons.printList();
 
 seasons.removeHead();
-
 seasons.printList();
+
+seasons.insertNode('fall', 'beach');
+seasons.printList();
+
