@@ -26,9 +26,8 @@ class Queue {
       this.queue.addToTail(data);
       this.size++;
       console.log(`Added ${data} to queue! Queue size is now ${this.size}.`);
-    } else {
-      throw new Error('QQueue is full!');
     }
+    throw new Error('Queue is full!');
   }
 
   dequeue() {
@@ -37,21 +36,20 @@ class Queue {
       this.size--;
       console.log(`Removed ${data}! Queue size is ${this.size}.`);
       return data;
-    } else {
-      throw new Error('Queue is empty!');
     }
+    throw new Error('Queue is empty!');
   }
 }
 
 module.exports = Queue;
 
-const restaurantOrder = new Queue();
-restaurantOrder.enqueue('apple pie');
-restaurantOrder.enqueue('roast chicken');
-restaurantOrder.enqueue('quinoa salad');
-restaurantOrder.enqueue('quinoa salad');
-console.log('\nFood preparing...\n')
-restaurantOrder.dequeue();
-restaurantOrder.dequeue();
-restaurantOrder.dequeue();
-console.log('All orders ready!')
+// const restaurantOrder = new Queue();
+// restaurantOrder.enqueue('apple pie');
+// restaurantOrder.enqueue('roast chicken');
+// restaurantOrder.enqueue('quinoa salad');
+// restaurantOrder.enqueue('quinoa salad');
+// console.log('\nFood preparing...\n');
+// restaurantOrder.dequeue();
+// restaurantOrder.dequeue();
+// restaurantOrder.dequeue();
+// console.log('All orders ready!');
