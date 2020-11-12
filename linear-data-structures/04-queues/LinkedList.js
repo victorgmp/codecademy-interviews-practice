@@ -15,7 +15,7 @@ class LinkedList {
   }
 
   addToTail(data) {
-    let lastNode = this.head;
+    const lastNode = this.head;
     if (!lastNode) {
       this.head = new Node(data);
     } else {
@@ -43,7 +43,7 @@ class LinkedList {
       output += currentNode.data + ' ';
       currentNode = currentNode.next;
     }
-    output = output.concat("<tail>");
+    output = output.concat('<tail>');
     console.log(output);
   }
 }

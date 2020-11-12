@@ -1,9 +1,9 @@
 const generateTestLinkedList = require('./generateTestLinkedList');
 
-const findMiddle = linkedList => {
+const findMiddle = (linkedList) => {
   let fast = linkedList.head;
   let slow = linkedList.head;
- 
+
   // As long as the end of the list is not reached
   while (fast !== null) {
     // Move the fast pointer at least one step
@@ -19,12 +19,12 @@ const findMiddle = linkedList => {
   return slow;
 };
 
-const findMiddleAlternate = linkedList => {
+const findMiddleAlternate = (linkedList) => {
   let count = 0;
   let fast = linkedList.head;
   let slow = linkedList.head;
- 
-  while(fast !== null) {
+
+  while (fast !== null) {
     fast = fast.getNextNode();
     if (count % 2 !== 0) {
       slow = slow.getNextNode();
@@ -32,7 +32,7 @@ const findMiddleAlternate = linkedList => {
     count++;
   }
   return slow;
-}
+};
 
 // Test your function yourself:
 console.log(findMiddle(generateTestLinkedList(7)));

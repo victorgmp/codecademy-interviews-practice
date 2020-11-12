@@ -5,7 +5,7 @@ class DoublyLinkedList {
     this.head = null;
     this.tail = null;
   }
-  
+
   // Create your .addToHead() method below:
   addToHead(data) {
     const newHead = new Node(data);
@@ -23,7 +23,7 @@ class DoublyLinkedList {
 
   addToTail(data) {
     const newTail = new Node(data);
-    const currentTail = this.tail;    
+    const currentTail = this.tail;
 
     if (currentTail) {
       currentTail.setNextNode(newTail);
@@ -71,7 +71,7 @@ class DoublyLinkedList {
         nodeToRemove = currentNode;
         break;
       }
-       currentNode = currentNode.getNextNode();
+      currentNode = currentNode.getNextNode();
     }
 
     if (!nodeToRemove) return null;
@@ -90,7 +90,7 @@ class DoublyLinkedList {
 
     return nodeToRemove;
   }
-  
+
   printList() {
     let currentNode = this.head;
     let output = '<head> ';

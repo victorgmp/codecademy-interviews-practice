@@ -13,10 +13,10 @@ const nthLastNode = (linkedList, n) => {
       }
       current = current.next;
     }
-    count++
+    count ++;
   }
   return current;
-}
+};
 
 // Test your function yourself:
 console.log(nthLastNode(testLinkedList, 4));

@@ -13,4 +13,3 @@ seasons.printList();
 
 seasons.insertNode('fall', 'beach');
 seasons.printList();
-
