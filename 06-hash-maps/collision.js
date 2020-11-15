@@ -3,8 +3,7 @@ const Node = require('./Node');
 class HashMap {
   constructor(size = 0) {
     this.hashmap = new Array(size)
-      .fill(null)
-      .map(() => new LinkedList());
+      .fill(null);
   }
 
   hash(key) {
@@ -17,11 +16,7 @@ class HashMap {
 
   assign(key, value) {
     const arrayIndex = this.hash(key);
-    const linkedList = this.hashmap[arrayIndex];
-    if (linkedList.head === null) {
-      linkedList.addToHead({ arrayIndex, linkedList });
-      return
-    }
+    
   }
 }
 
