@@ -8,6 +8,7 @@
   "rules": {
     "no-console": "off",
     "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
-    "consistent-return": [0, {"treatUndefinedAsUnspecified": true}]
+    "consistent-return": [0, {"treatUndefinedAsUnspecified": true}],
+    "no-param-reassign": [2, { "props": false }]
   }
 }
