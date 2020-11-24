@@ -9,7 +9,11 @@ const merge = (leftArray, rightArray) => {
       sortedArray.push(rightArray[0]);
       rightArray.shift();
     }
+    console.log('----------------------');
+    console.log('leftArray', leftArray);
+    console.log('rightArray', rightArray);
   }
+
   return sortedArray.concat(leftArray).concat(rightArray);
 };
 
@@ -24,10 +28,14 @@ const mergeSort = (startArray) => {
   const leftArray = startArray.slice(0, mid);
   const rightArray = startArray.slice(mid, length);
 
+  console.log('leftArray', leftArray);
+  console.log('rightArray', rightArray);
+
   return merge(mergeSort(leftArray), mergeSort(rightArray));
 };
 
-const inputArr = [3, 5, 2, 90, 4, 7];
+// const inputArr = [3, 5, 2, 90, 4, 7];
+const inputArr = [98, 13, 274, 7, 12, 981, 5];
 
 console.log(mergeSort(inputArr));
 
